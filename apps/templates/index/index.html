@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bed dream</title>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- CSS materialize -->
@@ -19,65 +19,53 @@
         <nav class="blue">         
             <div class="container">
             <div class="nav-wrapper">
-              <a href="#!" class="brand-logo">Logo</a>
+              <a href="#!" class="brand-logo">Bed Dreams</a>
               <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">Javascript</a></li>
-                <li><a href="mobile.html">Mobile</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastre.html">Crie seu cadastro</a></li>
+                <li><a href="produtos">Veja nossos produtos</a></li>
               </ul>
               <ul class="side-nav" id="mobile-demo">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">Javascript</a></li>
-                <li><a href="mobile.html">Mobile</a></li>
+                <li><a href="login.html">login</a></li>
+                <li><a href="cadastre-se.html">Crie seu cadastro</a></li>
+                <li><a href="produtos.html">Veja nossos produtos</a></li>
               </ul>
             </div>
           </nav>
     </header>
 
+
     <!--slider-->
     <div class="slider">
         <ul class="slides">
           <li>
-            <img src=""> <!-- random image -->
+            <img src="{% static '/img/cansado.jpg' %}"  alt="bravo"> <!-- random image -->
             <div class="caption center-align">
-              <h3>This is our big Tagline!</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+              <h3>Cansado de ter uma noite de sono ruim?</h3>
             </div>
           </li>
           <li>
-            <img src="https://s2.glbimg.com/yn6GgbTQYUZGSOONOTdr7qYvLrw=/0x0:1280x720/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/m/4/aZpuY7R1mvUWG47gBEBg/maxresdefault.jpg"> <!-- random image -->
+            <img src="{% static '/img/sonhos.png' %}" alt="dormir"> <!-- random image -->
             <div class="caption left-align">
+              <h3>Então venha conferir a Bed Dreams a loja de camas que você precisa ver!</h3>
+              <h5 class="light grey-text text-lighten-3">Durma bem com nossas camas, tenha ótimos sonhos e acorde motivado
+                para começar seu dia!!!.</h5>
             </div>
           </li>
-          <li>
-            <img src="https://dfg.ai/itemimages/914554744-elojob-valorant-i-brojob-49GT.jpg"> <!-- random image -->
-            <div class="caption right-align">
-              <h3>Right Aligned Caption</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div>
-          </li>
-          <li>
-            <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
-            <div class="caption center-align">
-              <h3>This is our big Tagline!</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div>
-          </li>
+
         </ul>
       </div>
 
       <!-- conteudo do meu site-->
       <div class="row container">
-        <section class="red col s12 m6 l9">
+        <section class="red col s12 m6 l9" >
           <h5 class="light"> noticias</h5>
 
           <article class="col s12 l6 xl4">
             <div class="card">
               <div class="card-image">
-                <img src="{% static '/img/teste.jpg' %}"  alt="banner">               
+                <img src="{% static '/img/insonia.png' %}"  alt="banner">               
               </div>
               <div class="card-content">
                 <span class="card-title">Card Title</span>
@@ -89,27 +77,12 @@
               </div>
             </div>
           </article>
-          
-          <aside class="green col s12 m6 l3">
-            <div class="card">
-              <div class="card-image">
-                <img src="{% static '/img/ranks.jpg' %}"  alt="banner">               
-              </div>
-              <div class="card-content">
-                <span class="card-title">Card Title</span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-              </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-              </div>
-            </div>
-          </aside>
+                    
 
           <article class="col s12 l6 xl4">
             <div class="card">
               <div class="card-image">
-                <img src="{% static '/img/ranks.jpg' %}"  alt="banner">               
+                <img src="{% static '/img/camade.jpg' %}"  alt="banner">               
               </div>
               <div class="card-content">
                 <span class="card-title">Card Title</span>
@@ -122,11 +95,23 @@
             </div>
           </article>
 
-        </section>
+          <article class="col s12 l6 xl4">
+            <div class="card">
+              <div class="card-image">
+                <img src="{% static '/img/gato.jpg' %}"  alt="banner">               
+              </div>
+              <div class="card-content">
+                <span class="card-title">Card Title</span>
+                <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </article>
 
-        <aside class="green col s12 m6 l3">
-          aside
-        </aside>
+               
       </div>
 
       <!--rodapé-->

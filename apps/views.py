@@ -7,3 +7,8 @@ def index(request):
 def login(request):
     return render(request, "index/login.html")
 
+def cadastre(request):
+    return render(request, "index/sobre.html")
+
+def produtos(request):
+    return render(request, "index/produtos")
