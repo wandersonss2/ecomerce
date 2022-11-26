@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- CSS materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
+    
 </head>
 <body>
     
@@ -18,17 +18,17 @@
     <header>
         <nav class="blue">         
             <div class="container">
-            <div class="nav-wrapper">
+            <div class="nav-wrapper" >
               <a href="#!" class="brand-logo">Bed Dreams</a>
               <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="login.html">Login</a></li>
                 <li><a href="cadastre.html">Crie seu cadastro</a></li>
-                <li><a href="produtos">Veja nossos produtos</a></li>
+                <li><a href="produtos.html">Veja nossos produtos</a></li>
               </ul>
               <ul class="side-nav" id="mobile-demo">
                 <li><a href="login.html">login</a></li>
-                <li><a href="cadastre-se.html">Crie seu cadastro</a></li>
+                <li><a href="cadastre.html">Crie seu cadastro</a></li>
                 <li><a href="produtos.html">Veja nossos produtos</a></li>
               </ul>
             </div>
@@ -36,17 +36,17 @@
     </header>
 
 
-    <!--slider-->
+    <!--slider das fotos configurado com jquery-->
     <div class="slider">
         <ul class="slides">
           <li>
-            <img src="{% static '/img/cansado.jpg' %}"  alt="bravo"> <!-- random image -->
+            <img src="{% static '/img/cansado.jpg' %}"  alt="bravo"> 
             <div class="caption center-align">
               <h3>Cansado de ter uma noite de sono ruim?</h3>
             </div>
           </li>
           <li>
-            <img src="{% static '/img/sonhos.png' %}" alt="dormir"> <!-- random image -->
+            <img src="{% static '/img/sonhos.png' %}" alt="dormir"> 
             <div class="caption left-align">
               <h3>Então venha conferir a Bed Dreams a loja de camas que você precisa ver!</h3>
               <h5 class="light grey-text text-lighten-3">Durma bem com nossas camas, tenha ótimos sonhos e acorde motivado
@@ -59,8 +59,8 @@
 
       <!-- conteudo do meu site-->
       <div class="row container">
-        <section class="red col s12 m6 l9" >
-          <h5 class="light"> noticias</h5>
+        <section class="col s12 m6 l9" >
+          <h5 class="light">Últimos produtos postados.</h5>
 
           <article class="col s12 l6 xl4">
             <div class="card">
@@ -68,16 +68,18 @@
                 <img src="{% static '/img/insonia.png' %}"  alt="banner">               
               </div>
               <div class="card-content">
-                <span class="card-title">Card Title</span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+                <span class="card-title">Cama da insônia.</span>
+                <p>Aquela cama para pessoas que sofrem a noite com a cabeça a mil pensando sobre a vida,
+                  trabalho, faculdade e dentre outros tipos de problemas. Essa cama é dedicada a essas pessoas,
+                  ja que ela vem preparada para te confortar a noite toda, ela ja vem comportada
+                  com um kit de anti-stress e vem também com um kit de abafador de som para você conseguir focar no sono
+                  sem ser incomodado.</p>
               </div>
               <div class="card-action">
-                <a href="#">This is a link</a>
+                <a href="#">Clique aqui para conferir!!!</a>
               </div>
             </div>
           </article>
-                    
 
           <article class="col s12 l6 xl4">
             <div class="card">
@@ -85,12 +87,14 @@
                 <img src="{% static '/img/camade.jpg' %}"  alt="banner">               
               </div>
               <div class="card-content">
-                <span class="card-title">Card Title</span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+                <span class="card-title">Cama do dorme fácil.</span>
+                <p>Essa cama é a mais simples que temos em nosso catálogo ja que é dedicada para as pessoas 
+                  que são portadoras do sono fácil "dorme em qualquer lugar mesmo com a pessoa falando com você" aquele 
+                  intervalo na hora do trabalho é so puxar da mochila e descansar, Já que ela vem com um kit para ser 
+                  transportada isso mesmo levou, montou, dormiu, desmontou e guardou, pratico e facil!!.</p>
               </div>
               <div class="card-action">
-                <a href="#">This is a link</a>
+                <a href="#">Clique aqui para conferir!!!</a>
               </div>
             </div>
           </article>
@@ -101,43 +105,88 @@
                 <img src="{% static '/img/gato.jpg' %}"  alt="banner">               
               </div>
               <div class="card-content">
-                <span class="card-title">Card Title</span>
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+                <span class="card-title">Cama dos sonhos.</span>
+                <p>Bom esse produto ainda está em teste pelo fato dela envolver questões financeiras!! a cama é dedicada a pessoas que
+                   são preguiçosas e se deixar dorme o dia todo, nessa cama é possível você receber dormindo, porém ainda está em teste.
+                   Sonho de qualquer pessoa receber dinheiro dormindo, como o produto não está finalizado não está habilitado para compra
+                  somente para visualização.</p>
               </div>
               <div class="card-action">
-                <a href="#">This is a link</a>
+                <a href="#">Visualize clicando aqui!!</a>
               </div>
             </div>
           </article>
+        </section>  
 
-               
+          <!--configuração do feedback-->
+        <aside class="col s12 m6 l3 ">
+          <h5>Feedbacks</h5>
+          <ul class="collection">
+            <li class="collection-item avatar">
+              <img src="{% static '/img/feed.jpg' %}" alt="feedback" class="circle">
+              <span class="title">Cliente</span>
+              <p>Excelente produto  <br>
+                 Solicitei até uma na minha cela.
+              </p>
+              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+            <li class="collection-item avatar">
+              <img src="{% static '/img/bolso.jpg' %}" alt="feedback" class="circle">             
+              <span class="title">Cliente 2</span>
+              <p>Produto de ótima qualidade <br>
+                 Solicitei para toda a família.
+              </p>
+              
+            </li>
+            <li class="collection-item avatar">
+              <img src="{% static '/img/osama.jpg' %}" alt="feedback" class="circle">
+              <span class="title">Cliente 3</span>
+              <p>عالي بستر <br>
+                چې بله ورځ له خوبه نه ویده شوی تر نن ورځې پورې
+              </p>          
+            </li>
+            <li class="collection-item avatar">
+              <img src="{% static '/img/trump.jpg' %}" alt="feedback" class="circle">
+              <span class="title">Cliente 4</span>
+              <p>very good and comfortable<br>
+                I will ask for all my country
+              </p>
+            </li>
+          </ul>
+
+            <!--parte explicando o produto-->
+          <h5 class="light">Sobre o Bed Dreams.</h5>
+          <div class="card blue center">
+            <div class="card-content white-text">
+              <i class="large material-icons">airline_seat_individual_suite</i>
+              <p>Bom a Bed Dreams veio com finalidade de ajudar pessoas que tem dificuldade com o sono,
+                visando inovar o mercado atual de camas e tentando criar um produto que possa suprir a necessidade da pessoa.
+                Nossa equipe é composta de 1 pessoa atualmente o fundador do site "Wanderson" que busca melhorar 
+                o mercado atual visando sempre ter feedbacks para tentar evoluir e se adaptar.
+                
+
+              </p>
+            </div>
+          </div>
+
+        </aside>           
       </div>
 
       <!--rodapé-->
 
-      <footer class="page-footer">
+      <footer class="page-footer blue ">
         <div class="container">
           <div class="row">
             <div class="col l6 s12">
-              <h5 class="white-text">Footer Content</h5>
-              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Links</h5>
-              <ul>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-              </ul>
-            </div>
+              <h5 class="white-text">Dedicado a fins educacionais</h5>
+              <p class="grey-text text-lighten-4">Site totalmente dedicado a fins educacionais sem intenção de denegrir
+                qualquer imagem de pessoas utilizadas no site.</p>
+            </div>          
           </div>
         </div>
         <div class="footer-copyright">
           <div class="container">
-          © 2022 Copyright Text
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          © 2022 Copyright Wanderson, Todos os direitos reservados.         
           </div>
         </div>
       </footer>

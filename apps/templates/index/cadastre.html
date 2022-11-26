@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bed dream</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- CSS materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    
+</head>
+<body>
+     <!--configurando a navbar-->
+     <header>
+        <nav class="blue">         
+            <div class="container">
+            <div class="nav-wrapper" >
+              <a href="#!" class="brand-logo">Bed Dreams</a>
+              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastre.html">Crie seu cadastro</a></li>
+                <li><a href="produtos.html">Veja nossos produtos</a></li>
+              </ul>
+              <ul class="side-nav" id="mobile-demo">
+                <li><a href="login.html">login</a></li>
+                <li><a href="cadastre.html">Crie seu cadastro</a></li>
+                <li><a href="produtos.html">Veja nossos produtos</a></li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+
+
+     <!--slider das fotos configurado com jquery-->
+     <div class="slider">
+        <ul class="slides">
+          <li>
+            <img src="{% static '/img/cansado.jpg' %}"  alt="bravo"> 
+            <div class="caption center-align">
+              <h3>Cansado de ter uma noite de sono ruim?</h3>
+            </div>
+          </li>
+          <li>
+            <img src="{% static '/img/sonhos.png' %}" alt="dormir"> 
+            <div class="caption left-align">
+              <h3>Então venha conferir a Bed Dreams a loja de camas que você precisa ver!</h3>
+              <h5 class="light grey-text text-lighten-3">Durma bem com nossas camas, tenha ótimos sonhos e acorde motivado
+                para começar seu dia!!!.</h5>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="row"> 
+        <form class="col s12":>
+            <div class="input-field col s6">
+                <input type="text" id="nome"
+                placeholder="Cadastre seu login">  
+                <label for="nome">Crie seu login</label>
+            </div>
+            <div class="input-field col s6">
+                <input type="email" id="email" class="validate">
+                <label data-error="Email inválido" data-success="Email válido" 
+                for="email">Cadastre seu email</label>
+            </div>    
+        </form>
+      </div>
+         
+
+
+
+
+    <!--rodapé-->
+    <footer class="page-footer blue ">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Dedicado a fins educacionais</h5>
+              <p class="grey-text text-lighten-4">Site totalmente dedicado a fins educacionais sem intenção de denegrir
+                qualquer imagem de pessoas utilizadas no site.</p>
+            </div>          
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2022 Copyright Wanderson, Todos os direitos reservados.         
+          </div>
+        </div>
+      </footer>
+
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!--Js materialize-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>   
+    <script>
+    $( document ).ready(function(){
+        
+        //botões do menu
+        $(".button-collapse").sideNav();
+        //slider
+        $('.slider').slider();
+    });   
+    </script>
+</body>
+</html>
