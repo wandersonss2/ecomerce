@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,17 +19,17 @@
         <nav class="blue">         
             <div class="container">
             <div class="nav-wrapper" >
-              <a href="#!" class="brand-logo">Bed Dreams</a>
+              <a href="{% url 'home' %}" class="brand-logo">Bed Dreams</a>
               <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down">
-                <li><a href="login.html">Login</a></li>
-                <li><a href="cadastre.html">Crie seu cadastro</a></li>
-                <li><a href="produtos.html">Veja nossos produtos</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'cadastre' %}">Crie seu cadastro</a></li>
+                <li><a href="{% url 'produtos' %}">Veja nossos produtos</a></li>
               </ul>
               <ul class="side-nav" id="mobile-demo">
-                <li><a href="login.html">login</a></li>
-                <li><a href="cadastre.html">Crie seu cadastro</a></li>
-                <li><a href="produtos.html">Veja nossos produtos</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'cadastre' %}">Crie seu cadastro</a></li>
+                <li><a href="{% url 'produtos' %}">Veja nossos produtos</a></li>
               </ul>
             </div>
           </nav>

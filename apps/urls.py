@@ -3,9 +3,9 @@ from .views import *
 
 
 urlpatterns = [
-    path('', index),
-    path('login/', login),
-    path('cadastre/', cadastre),
-    path('produtos/', produtos)
+    path('', index, name='home'),
+    path('login/', login, name='login'),
+    path('cadastre/', cadastre, name='cadastre'),
+    path('produtos/', produtos, name='produtos')
 ]
 
