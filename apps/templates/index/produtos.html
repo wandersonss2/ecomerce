@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bed dream</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- CSS materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    
+</head>
+<body>
+     <!--configurando a navbar-->
+     <header>
+        <nav class="blue">         
+            <div class="container">
+            <div class="nav-wrapper" >
+              <a href="{% url 'home' %}" class="brand-logo">Bed Dreams</a>
+              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'cadastre' %}">Crie seu cadastro</a></li>
+                <li><a href="{% url 'produtos' %}">Veja nossos produtos</a></li>
+              </ul>
+              <ul class="side-nav" id="mobile-demo">
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'cadastre' %}">Crie seu cadastro</a></li>
+                <li><a href="{% url 'produtos' %}">Veja nossos produtos</a></li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+
+    <div class="row container">
+        <section class="col s12 m6 l9" >
+          <h5 class="light">Produtos disponíveis.</h5>
+
+          <article class="col s12 l6 xl4">
+            <div class="card">
+              <div class="card-image">
+                <img src="{% static '/img/produto1.jpg' %}"  alt="banner">               
+              </div>
+              <div class="card-content">
+                <span class="card-title"></span>
+                <p></p>
+              </div>
+              <div class="card-action">
+                <a href="#">Compre agora!</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col s12 l6 xl4">
+            <div class="card">
+              <div class="card-image">
+                <img src="{% static '/img/produto2.jpg' %}"  alt="banner">               
+              </div>
+              <div class="card-content">
+                <span class="card-title"></span>
+                <p></p>
+              </div>
+              <div class="card-action">
+                <a href="#">Compre agora!!</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col s12 l6 xl4">
+            <div class="card">
+              <div class="card-image">
+                <img src="{% static '/img/produto3.jpg' %}"  alt="banner">               
+              </div>
+              <div class="card-content">
+                <span class="card-title"></span>
+                <p></p>
+              </div>
+              <div class="card-action">
+                <a href="#">Compre agora!!</a>
+              </div>
+            </div>
+          </article>
+
+          
+        </section>  
+
+    </div>    
+      
+
+    <!--rodapé-->
+    <footer class="page-footer blue ">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Dedicado a fins educacionais</h5>
+              <p class="grey-text text-lighten-4">Site totalmente dedicado a fins educacionais sem intenção de denegrir
+                qualquer imagem de pessoas utilizadas no site.</p>
+            </div>          
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2022 Copyright Wanderson, Todos os direitos reservados.         
+          </div>
+        </div>
+      </footer>
+
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!--Js materialize-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>   
+    <script>
+    $( document ).ready(function(){
+        
+        //botões do menu
+        $(".button-collapse").sideNav();
+        //slider
+        $('.slider').slider();
+    });   
+    </script>
+</body>
+</html>
