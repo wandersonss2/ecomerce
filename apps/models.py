@@ -16,6 +16,7 @@ class produto(models.Model):
     produto=models.CharField(max_length=40)
     valor=models.FloatField()
     quantidade=models.IntegerField()
+    a
 
 
 

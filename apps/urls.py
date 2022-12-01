@@ -8,4 +8,4 @@ urlpatterns = [
     path('cadastre/', cadastre, name='cadastre'),
     path('produtos/', produtos, name='produtos')
 ]
-
+a

@@ -12,5 +12,6 @@ def cadastre(request):
 
 def produtos(request):
     return render(request, "index/produtos.html")
- 
+
+a 
 
