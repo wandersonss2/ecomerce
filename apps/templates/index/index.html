@@ -25,11 +25,13 @@
                 <li><a href="{% url 'login' %}">Login</a></li>
                 <li><a href="{% url 'cadastre' %}">Crie seu cadastro</a></li>
                 <li><a href="{% url 'produtos' %}">Veja nossos produtos</a></li>
+                <li><a href="{% url 'carrinho' %}">Veja seu carrinho</a></li>
               </ul>
               <ul class="side-nav" id="mobile-demo">
                 <li><a href="{% url 'login' %}">Login</a></li>
                 <li><a href="{% url 'cadastre' %}">Crie seu cadastro</a></li>
                 <li><a href="{% url 'produtos' %}">Veja nossos produtos</a></li>
+                <li><a href="{% url 'carrinho' %}">Veja seu carrinho</a></li>
               </ul>
             </div>
           </nav>
@@ -76,7 +78,7 @@
                   sem ser incomodado.</p>
               </div>
               <div class="card-action">
-                <a href="#">Clique aqui para conferir!!!</a>
+                <a href="{% url 'produtos' %}">Clique aqui para conferir!!!</a>
               </div>
             </div>
           </article>
@@ -94,7 +96,7 @@
                   transportada isso mesmo levou, montou, dormiu, desmontou e guardou, pratico e facil!!.</p>
               </div>
               <div class="card-action">
-                <a href="#">Clique aqui para conferir!!!</a>
+                <a href="{% url 'produtos' %}">Clique aqui para conferir!!!</a>
               </div>
             </div>
           </article>
@@ -112,7 +114,7 @@
                   somente para visualização.</p>
               </div>
               <div class="card-action">
-                <a href="#">Visualize clicando aqui!!</a>
+                <a href="{% url 'produtos' %}">Visualize clicando aqui!!</a>
               </div>
             </div>
           </article>
@@ -128,7 +130,7 @@
               <p>Excelente produto  <br>
                  Solicitei até uma na minha cela.
               </p>
-              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+              <a class="secondary-content"><i class="material-icons">grade</i></a>
             </li>
             <li class="collection-item avatar">
               <img src="{% static '/img/bolso.jpg' %}" alt="feedback" class="circle">             

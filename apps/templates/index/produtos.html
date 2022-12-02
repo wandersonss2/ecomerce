@@ -24,11 +24,13 @@
                 <li><a href="{% url 'login' %}">Login</a></li>
                 <li><a href="{% url 'cadastre' %}">Crie seu cadastro</a></li>
                 <li><a href="{% url 'produtos' %}">Veja nossos produtos</a></li>
+                <li><a href="{% url 'carrinho' %}">Veja seu carrinho</a></li>
               </ul>
               <ul class="side-nav" id="mobile-demo">
                 <li><a href="{% url 'login' %}">Login</a></li>
                 <li><a href="{% url 'cadastre' %}">Crie seu cadastro</a></li>
                 <li><a href="{% url 'produtos' %}">Veja nossos produtos</a></li>
+                <li><a href="{% url 'carrinho' %}">Veja seu carrinho</a></li>
               </ul>
             </div>
           </nav>
@@ -44,11 +46,26 @@
                 <img src="{% static '/img/produto1.jpg' %}"  alt="banner">               
               </div>
               <div class="card-content">
-                <span class="card-title"></span>
-                <p></p>
+                <span class="card-title">Cama dos filmes</span>
+                <p>Adquira já a cama filme que ajuda vc sonhar com seu personagem favorito NA PROMOÇÃO POR APENAS <B>"R$:1000"</B></p>
               </div>
               <div class="card-action">
-                <a href="#">Compre agora!</a>
+                <a href="{% url 'carrinho' %}">Compre agora!</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col s12 l6 xl4">
+            <div class="card">
+              <div class="card-image">
+                <img src="{% static '/img/produto5.jpg' %}"  alt="banner">               
+              </div>
+              <div class="card-content">
+                <span class="card-title">Cama do casal perfeito</span>
+                <p>Adquira já a cama que é feita para o seu relacionamento "POR APENAS <B>R$:2000</B>"</p>
+              </div>
+              <div class="card-action">
+                <a href="{% url 'carrinho' %}">Compre agora!</a>
               </div>
             </div>
           </article>
@@ -59,11 +76,11 @@
                 <img src="{% static '/img/produto2.jpg' %}"  alt="banner">               
               </div>
               <div class="card-content">
-                <span class="card-title"></span>
-                <p></p>
+                <span class="card-title"> Cama dorme fácil</span>
+                <p>Adquira já sua cama dorme fácil POR APENAS <B>"R$:500"</B> clicando no botão "Compre agora"</p>
               </div>
               <div class="card-action">
-                <a href="#">Compre agora!!</a>
+                <a href="{% url 'carrinho' %}">Compre agora!!</a>
               </div>
             </div>
           </article>
@@ -74,15 +91,45 @@
                 <img src="{% static '/img/produto3.jpg' %}"  alt="banner">               
               </div>
               <div class="card-content">
-                <span class="card-title"></span>
-                <p></p>
+                <span class="card-title">Cama do sozinho</span>
+                <p>Compre já a cama de casal para solteiro  POR APENAS <B>"R$:700"</B>Clicando no "Compre agora"</p>
               </div>
               <div class="card-action">
-                <a href="#">Compre agora!!</a>
+                <a href="{% url 'carrinho' %}">Compre agora!!</a>
               </div>
             </div>
           </article>
 
+          <article class="col s12 l6 xl4">
+            <div class="card">
+              <div class="card-image">
+                <img src="{% static '/img/produto4.jpg' %}"  alt="banner">               
+              </div>
+              <div class="card-content">
+                <span class="card-title">Cama do dorme direito</span>
+                <p>COMPRE JA NA PROMOÇÃO POR APENAS <B>"R$:3000"</B>
+                  a cama dorme direito te ajuda a dormir em uma posição fixa eternamente</p>
+              </div>
+              <div class="card-action">
+                <a href="{% url 'carrinho' %}">Compre agora!!</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col s12 l6 xl4">
+            <div class="card">
+              <div class="card-image">
+                <img src="{% static '/img/produto8.jpg' %}"  alt="banner">               
+              </div>
+              <div class="card-content">
+                <span class="card-title">Cama dos sonhos</span>
+                <p>Esse produto ainda está em teste, somente funcionários podem testar ela.<B>"Apenas visualização"</B></p>
+              </div>
+              <div class="card-action">
+                <a>Produto indisponível para compra</a>
+              </div>
+            </div>
+          </article>
           
         </section>  
 
