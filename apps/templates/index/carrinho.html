@@ -21,14 +21,23 @@
               <a href="{% url 'home' %}" class="brand-logo">Bed Dreams</a>
               <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down">
-                <li><a href="{% url 'login' %}">Login</a></li>
+                {% if not user  %}
+                <li><a href="{% url 'login' %}">Login</a></li>               
                 <li><a href="{% url 'cadastre' %}">Crie seu cadastro</a></li>
+                {% else %}
+                <li>{{user|title}}</li>
+                <li><a href='http://127.0.0.1:8000/accounts/logout'>Deslogar</a></li> 
+                {% endif %}    
                 <li><a href="{% url 'produtos' %}">Veja nossos produtos</a></li>
                 <li><a href="{% url 'carrinho' %}">Veja seu carrinho</a></li>
               </ul>
               <ul class="side-nav" id="mobile-demo">
-                <li><a href="{% url 'login' %}">Login</a></li>
+                {% if not user  %}
+                <li><a href="{% url 'login' %}">Login</a></li>               
                 <li><a href="{% url 'cadastre' %}">Crie seu cadastro</a></li>
+                {% else %}
+                <li><a href='accounts/logout'>Deslogar</a></li> 
+                {% endif %}    
                 <li><a href="{% url 'produtos' %}">Veja nossos produtos</a></li>
                 <li><a href="{% url 'carrinho' %}">Veja seu carrinho</a></li>
               </ul>

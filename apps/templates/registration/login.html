@@ -23,20 +23,19 @@
               <ul class="right hide-on-med-and-down">
                 <li><a href="{% url 'login' %}">Login</a></li>
                 <li><a href="{% url 'cadastre' %}">Crie seu cadastro</a></li>
-                <li><a href="{% url 'produtos' %}">Veja nossos produtos</a></li>
-                <li><a href="{% url 'carrinho' %}">Veja seu carrinho</a></li>
               </ul>
               <ul class="side-nav" id="mobile-demo">
                 <li><a href="{% url 'login' %}">Login</a></li>
                 <li><a href="{% url 'cadastre' %}">Crie seu cadastro</a></li>
-                <li><a href="{% url 'produtos' %}">Veja nossos produtos</a></li>
-                <li><a href="{% url 'carrinho' %}">Veja seu carrinho</a></li>
               </ul>
             </div>
           </nav>
     </header>
 
           <!--configuração do login-->
+        
+       <form method="POST">
+        {% csrf_token %}
         <div class="row">
             <div class="col s12 m4 offset-m4">
                 <div class="card">
@@ -46,11 +45,11 @@
                     <div class="card-content">
                         <div class="form-field">
                             <label for="username">Login</label>
-                            <input type="text" id="username">
+                            <input type="text" id="username" name="{{form.username.name}}">
                         </div><br>
                         <div class="form-field">
                             <label for="password">Senha</label>
-                            <input type="password" id="password">
+                            <input type="password" id="password" name="{{form.password.name}}">
                         </div><br>
                         <div class="form-field">               
                             <input type="checkbox" id="lembre">
@@ -63,7 +62,7 @@
                 </div>
             </div>    
         </div>  
-
+      </form>   
 
   
       

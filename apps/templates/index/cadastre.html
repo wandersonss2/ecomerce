@@ -21,14 +21,23 @@
               <a href="{% url 'home' %}" class="brand-logo">Bed Dreams</a>
               <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down">
-                <li><a href="{% url 'login' %}">Login</a></li>
+                {% if not user  %}
+                <li><a href="{% url 'login' %}">Login</a></li>               
                 <li><a href="{% url 'cadastre' %}">Crie seu cadastro</a></li>
+                {% else %}
+                <li>{{user|title}}</li>
+                <li><a href='http://127.0.0.1:8000/accounts/logout'>Deslogar</a></li> 
+                {% endif %}    
                 <li><a href="{% url 'produtos' %}">Veja nossos produtos</a></li>
                 <li><a href="{% url 'carrinho' %}">Veja seu carrinho</a></li>
               </ul>
               <ul class="side-nav" id="mobile-demo">
-                <li><a href="{% url 'login' %}">Login</a></li>
+                {% if not user  %}
+                <li><a href="{% url 'login' %}">Login</a></li>               
                 <li><a href="{% url 'cadastre' %}">Crie seu cadastro</a></li>
+                {% else %}
+                <li><a href='accounts/logout'>Deslogar</a></li> 
+                {% endif %}    
                 <li><a href="{% url 'produtos' %}">Veja nossos produtos</a></li>
                 <li><a href="{% url 'carrinho' %}">Veja seu carrinho</a></li>
               </ul>
@@ -53,33 +62,27 @@
 
 
             <div class="col s12 l5">
-              <form action="">
+              <form action="" method="POST">
+                {% csrf_token %}
                 <h4 class="center-align">Crie seu cadastro</h4>
 
                 <div class="input-field">
                   <i class="material-icons prefix">account_box</i>
-                  <input type="text" id="nome">
-                  <label for="nome">Nome completo</label>
+                  <input type="text" id="nome" name="username" required>
+                  <label for="nome">Username</label>
                 </div>
 
                 <div class="input-field">
                   <i class="material-icons prefix">email</i>
-                  <input type="email" id="email">
+                  <input type="email" id="email" name="email" required>
                   <label for="email">E-mail</label>
                 </div>
 
                 <div class="input-field">
                   <i class="material-icons prefix">password</i>
-                  <input type="password" id="senha">
+                  <input type="password" id="senha" name="password" required>
                   <label for="senha">Crie sua senha</label>
                 </div>
-
-                <div class="input-field">
-                  <i class="material-icons prefix">today</i>
-                  <input type="text" id="data">
-                  <label for="data">Data de nascimento</label>
-                </div>
-
                 <div>                               
                       <input type="checkbox" id="box" class="filled-in">
                       <label for="box">Eu aceito <b class="blue-text">os Termos de Uso e Política de Privacidade</b>.</label>
